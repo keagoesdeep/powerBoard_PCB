@@ -1,4 +1,4 @@
-update=12/03/2018 21:33:29
+update=13/03/2018 20:55:02
 version=1
 last_client=kicad
 [pcbnew]
@@ -23,8 +23,6 @@ ModuleOutlineThickness=0.150000000000
 [cvpcb]
 version=1
 NetIExt=net
-[general]
-version=1
 [eeschema]
 version=1
 LibDir=../../../Documents/MB_LIB
@@ -62,3 +60,5 @@ LibName30=atmel
 LibName31=contrib
 LibName32=valves
 LibName33=C:/Users/mano/Documents/MB_LIB/MB_DEVICE
+[general]
+version=1

@@ -31,13 +31,12 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:MB_DEVICE
 LIBS:power_board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 3
+Sheet 1 4
 Title ""
 Date ""
 Rev ""
@@ -685,4 +684,10 @@ F 3 "" H 6100 2200 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6100 2200 6100 2650
+$Sheet
+S 4300 5100 1050 750 
+U 5AA83047
+F0 "Overvoltage protection" 60
+F1 "overvoltage_protection.sch" 60
+$EndSheet
 $EndSCHEMATC
