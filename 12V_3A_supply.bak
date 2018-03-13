@@ -32,6 +32,7 @@ LIBS:atmel
 LIBS:contrib
 LIBS:valves
 LIBS:MB_DEVICE
+LIBS:power_board-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -135,7 +136,7 @@ L R R?
 U 1 1 5AA6E84B
 P 4700 3700
 F 0 "R?" V 4780 3700 50  0000 C CNN
-F 1 "133" V 4700 3700 50  0000 C CNN
+F 1 "143k" V 4700 3700 50  0000 C CNN
 F 2 "Resistors_SMD:R_0402" V 4630 3700 50  0001 C CNN
 F 3 "" H 4700 3700 50  0001 C CNN
 	1    4700 3700
@@ -284,23 +285,6 @@ F 3 "" H 3900 4350 50  0001 C CNN
 	1    3900 4350
 	1    0    0    -1  
 $EndComp
-$Comp
-L R R?
-U 1 1 5AA6F18F
-P 6100 2850
-F 0 "R?" V 6180 2850 50  0000 C CNN
-F 1 "976" V 6100 2850 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 6030 2850 50  0001 C CNN
-F 3 "" H 6100 2850 50  0001 C CNN
-	1    6100 2850
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	6000 3050 6100 3050
-Wire Wire Line
-	6100 3050 6100 3000
-Wire Wire Line
-	6100 2700 6450 2700
 Wire Wire Line
 	6000 3150 6150 3150
 Wire Wire Line
@@ -310,16 +294,14 @@ L L L?
 U 1 1 5AA6F2C2
 P 6750 3150
 F 0 "L?" V 6700 3150 50  0000 C CNN
-F 1 "L" V 6825 3150 50  0000 C CNN
-F 2 "" H 6750 3150 50  0001 C CNN
-F 3 "" H 6750 3150 50  0001 C CNN
+F 1 "16uH" V 6825 3150 50  0000 C CNN
+F 2 "Inductors_SMD:L_Wuerth_HCI-1050" H 6750 3150 50  0001 C CNN
+F 3 "http://katalog.we-online.de/pbs/datasheet/7443251600.pdf" H 6750 3150 50  0001 C CNN
 	1    6750 3150
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
 	7000 3150 7000 3200
-Wire Wire Line
-	6000 3550 7000 3550
 Wire Wire Line
 	7000 3500 7000 3600
 Connection ~ 7000 3550
@@ -362,22 +344,9 @@ Wire Wire Line
 Wire Wire Line
 	6500 3250 6500 3150
 Connection ~ 6500 3150
-$Comp
-L D D?
-U 1 1 5AA6F774
-P 6550 3350
-F 0 "D?" H 6550 3450 50  0000 C CNN
-F 1 "D" H 6550 3250 50  0000 C CNN
-F 2 "" H 6550 3350 50  0001 C CNN
-F 3 "" H 6550 3350 50  0001 C CNN
-	1    6550 3350
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	6550 3150 6550 3200
 Connection ~ 6550 3150
-Wire Wire Line
-	6550 3500 6550 4350
 $Comp
 L GND #PWR?
 U 1 1 5AA6F863
@@ -428,11 +397,41 @@ Wire Wire Line
 	7750 3150 7750 3100
 Connection ~ 7550 3150
 $Comp
-L +12V #PWR?
-U 1 1 5AA6FDF2
+L D_Schottky_AKA D?
+U 1 1 5AA80853
+P 6550 3350
+F 0 "D?" H 6550 3450 50  0000 C CNN
+F 1 "STPS20M100S" H 6750 3250 50  0000 C CNN
+F 2 "TO_SOT_Packages_SMD:TO-263-2" H 6550 3350 50  0001 C CNN
+F 3 "http://www.st.com/content/ccc/resource/technical/document/datasheet/group2/8f/d3/41/ea/82/b2/4b/5a/CD00228904/files/CD00228904.pdf/jcr:content/translations/en.CD00228904.pdf" H 6550 3350 50  0001 C CNN
+	1    6550 3350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6550 3550 6550 4350
+Wire Wire Line
+	6650 3550 6650 4250
+Wire Wire Line
+	6650 4250 6550 4250
+Connection ~ 6550 4250
+Wire Wire Line
+	7000 3550 6800 3550
+Wire Wire Line
+	6800 3550 6800 3950
+Wire Wire Line
+	6800 3950 6150 3950
+Wire Wire Line
+	6150 3950 6150 3550
+Wire Wire Line
+	6150 3550 6000 3550
+NoConn ~ 4950 3150
+NoConn ~ 6000 3050
+$Comp
+L +12P #PWR?
+U 1 1 5AA81E40
 P 7750 3100
 F 0 "#PWR?" H 7750 2950 50  0001 C CNN
-F 1 "+12V" H 7750 3240 50  0000 C CNN
+F 1 "+12P" H 7750 3240 50  0000 C CNN
 F 2 "" H 7750 3100 50  0001 C CNN
 F 3 "" H 7750 3100 50  0001 C CNN
 	1    7750 3100
