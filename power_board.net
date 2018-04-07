@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:/Users/mano/Documents/new_power_board/powerBoard_PCB/power_board.sch)
-    (date "04/04/2018 09:31:48")
+    (date "07/04/2018 19:32:33")
     (tool "Eeschema 4.0.7")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -493,9 +493,9 @@
       (tstamp 5AA70364))
     (comp (ref C22)
       (value 47uF)
-      (footprint Capacitors_SMD:C_0603)
+      (footprint Capacitor_SMD:C_1206_3216Metric_Pad1.24x1.80mm_HandSolder)
       (fields
-        (field (name MPN) C1608X7R1H474K080AC))
+        (field (name MPN) CL31A476MQHNNNE))
       (libsource (lib device) (part C))
       (sheetpath (names /5V_5A_supply/) (tstamps /5AA6FFB1/))
       (tstamp 5AA7072F))
